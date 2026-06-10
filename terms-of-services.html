@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions — LumaCare Dental Clinic</title>
+  <link rel="icon" type="images/png" href="images/luma.png">
+
+  <meta name="description" content="Terms and Conditions for LumaCare Dental Clinic, Chennai. Read our policies on appointments, treatments, payments, cancellations, and more." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Your existing CSS (inlined below) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ============================================================
+       TERMS PAGE — additional styles only (no overrides of brand)
+       ============================================================ */
+
+    /* ---- Hero / Banner ---- */
+    .terms-hero {
+      position: relative;
+      padding: calc(var(--nav-h) + 4rem) 0 4rem;
+      background: var(--grad-hero);
+      overflow: hidden;
+      text-align: center;
+    }
+    .terms-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 15% 30%, rgba(156,39,176,.07) 0%, transparent 50%),
+        radial-gradient(circle at 85% 70%, rgba(233,30,99,.07) 0%, transparent 50%);
+      z-index: 0;
+    }
+    .terms-hero-orb {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      filter: blur(70px); z-index: 0;
+    }
+    .terms-hero-orb-1 { width: 420px; height: 420px; top: -160px; right: -80px; background: rgba(156,39,176,.1); }
+    .terms-hero-orb-2 { width: 320px; height: 320px; bottom: -100px; left: -60px; background: rgba(233,30,99,.08); }
+
+    .terms-hero-inner { position: relative; z-index: 1; }
+
+    .terms-hero .eyebrow { margin-bottom: .6rem; }
+
+    .terms-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      color: var(--teal-deep);
+      margin-bottom: .85rem;
+    }
+    .terms-hero h1 em {
+      font-style: italic;
+      background: var(--grad);
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+    }
+    .terms-hero-desc {
+      font-size: 1rem; color: var(--ink-60); max-width: 540px;
+      margin: 0 auto 1.5rem; line-height: 1.7;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      display: inline-flex; align-items: center; gap: .45rem;
+      background: var(--glass); backdrop-filter: blur(12px);
+      border: 1px solid var(--border-mid); border-radius: 999px;
+      padding: .45rem 1.1rem; font-size: .8rem; font-weight: 600;
+      color: var(--ink-60);
+    }
+    .breadcrumb a { color: var(--teal); transition: color .2s; }
+    .breadcrumb a:hover { color: var(--teal-deep); }
+    .breadcrumb i { font-size: .6rem; color: var(--ink-40); }
+
+    /* Last updated badge */
+    .updated-badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(156,39,176,.07); border: 1px solid var(--border-mid);
+      border-radius: 999px; padding: .3rem .9rem;
+      font-size: .75rem; font-weight: 700; color: var(--teal);
+      margin-top: 1rem; margin-bottom: 0;
+    }
+
+    /* ---- Layout ---- */
+    .terms-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      padding: 4rem 0 5rem;
+    }
+
+    /* ---- Sticky TOC sidebar ---- */
+    .terms-toc {
+      position: sticky; top: calc(var(--nav-h) + 1.5rem);
+      background: #fff; border: 1px solid var(--border-mid);
+      border-radius: var(--radius-lg); padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .terms-toc h4 {
+      font-size: .8rem; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--muted);
+      margin-bottom: 1rem; font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+    }
+    .toc-list { display: grid; gap: .2rem; }
+    .toc-list a {
+      display: flex; align-items: center; gap: .55rem;
+      font-size: .82rem; font-weight: 600; color: var(--ink-60);
+      padding: .45rem .6rem; border-radius: 9px;
+      transition: all .2s;
+    }
+    .toc-list a i { color: var(--teal); width: 14px; text-align: center; font-size: .75rem; flex-shrink: 0; }
+    .toc-list a:hover,
+    .toc-list a.active { background: rgba(156,39,176,.07); color: var(--teal-deep); }
+    .toc-list a.active { background: rgba(156,39,176,.1); color: var(--teal); }
+
+    /* ---- Content area ---- */
+    .terms-content { display: grid; gap: 1.5rem; }
+
+    /* ---- Terms section card ---- */
+    .tc-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 2rem;
+      box-shadow: var(--shadow-xs);
+      scroll-margin-top: calc(var(--nav-h) + 1.5rem);
+      transition: border-color .3s, box-shadow .3s;
+    }
+    .tc-card:hover { border-color: var(--border-mid); box-shadow: var(--shadow-sm); }
+
+    .tc-card-header {
+      display: flex; align-items: flex-start; gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .tc-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: rgba(156,39,176,.1); color: var(--teal);
+      display: grid; place-items: center; font-size: 1rem;
+      flex-shrink: 0; margin-top: .1rem;
+    }
+    .tc-card-header-text h3 {
+      font-size: 1.1rem; color: var(--teal-deep); margin-bottom: .15rem;
+    }
+    .tc-card-header-text span {
+      font-size: .75rem; font-weight: 700; color: var(--muted);
+      text-transform: uppercase; letter-spacing: .08em;
+    }
+
+    .tc-body { font-size: .92rem; color: var(--ink-60); line-height: 1.75; }
+    .tc-body p { margin-bottom: .85rem; }
+    .tc-body p:last-child { margin-bottom: 0; }
+    .tc-body ul {
+      list-style: none; padding: 0;
+      display: grid; gap: .5rem; margin: .75rem 0;
+    }
+    .tc-body ul li {
+      display: flex; align-items: flex-start; gap: .55rem;
+      font-size: .9rem; color: var(--ink-60);
+    }
+    .tc-body ul li::before {
+      content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+      color: var(--teal); font-size: .7rem; margin-top: .28rem; flex-shrink: 0;
+    }
+    .tc-body strong { color: var(--ink-80); font-weight: 700; }
+
+    /* Highlight box */
+    .tc-highlight {
+      background: rgba(156,39,176,.05); border: 1px solid var(--border-mid);
+      border-left: 3px solid var(--teal); border-radius: 10px;
+      padding: .9rem 1.1rem; margin: .85rem 0;
+      font-size: .88rem; color: var(--ink-80); line-height: 1.6;
+    }
+    .tc-highlight i { color: var(--teal); margin-right: .4rem; }
+
+    /* Warning box */
+    .tc-warning {
+      background: rgba(211,47,47,.04); border: 1px solid rgba(211,47,47,.2);
+      border-left: 3px solid var(--danger); border-radius: 10px;
+      padding: .9rem 1.1rem; margin: .85rem 0;
+      font-size: .88rem; color: var(--ink-80); line-height: 1.6;
+    }
+    .tc-warning i { color: var(--danger); margin-right: .4rem; }
+
+    /* ---- Intro card (full-width special) ---- */
+    .tc-intro-card {
+      background: var(--grad-dark); color: #fff;
+      border-radius: var(--radius-lg); padding: 2rem 2.5rem;
+      box-shadow: var(--shadow-md);
+    }
+    .tc-intro-card .tc-icon { background: rgba(255,255,255,.15); color: #fff; }
+    .tc-intro-card .tc-card-header { border-bottom-color: rgba(255,255,255,.15); }
+    .tc-intro-card .tc-card-header-text h3 { color: #fff; }
+    .tc-intro-card .tc-card-header-text span { color: rgba(255,255,255,.6); }
+    .tc-intro-card .tc-body { color: rgba(255,255,255,.85); }
+    .tc-intro-card .tc-body strong { color: #fff; }
+    .tc-intro-card .tc-highlight {
+      background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.2);
+      border-left-color: var(--gold); color: rgba(255,255,255,.9);
+    }
+    .tc-intro-card .tc-highlight i { color: var(--gold); }
+
+    /* ---- Back to home strip ---- */
+    .terms-back-strip {
+      background: var(--off-white); border-top: 1px solid var(--border);
+      padding: 2rem 0;
+    }
+    .terms-back-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .terms-back-inner p { font-size: .9rem; color: var(--muted); }
+    .terms-back-inner p strong { color: var(--teal-deep); }
+
+    /* ---- Section number label ---- */
+    .tc-section-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--teal); color: #fff;
+      font-size: .65rem; font-weight: 800;
+      flex-shrink: 0; margin-top: .05rem;
+    }
+    .footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.footer-contact-list i {
+    color: var(--teal-light);
+    min-width: 20px;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+.footer-contact-list a,
+.footer-contact-list span {
+    color: inherit;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+@media (max-width: 768px) {
+    .footer-contact-list li {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer-contact-list i {
+        min-width: 18px;
+        font-size: 14px;
+    }
+}
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+
+    /* ---- Global overflow guards (prevent horizontal scroll on mobile) ---- */
+    html, body { max-width: 100%; overflow-x: hidden; }
+    img, svg, video { max-width: 100%; height: auto; }
+    .terms-hero, .terms-back-strip, footer { overflow-x: clip; }
+
+    /* Long words / emails / URLs shouldn't blow out the layout */
+    .tc-body, .tc-body p, .tc-body li, .tc-body a,
+    .footer-contact-list a, .footer-contact-list span,
+    .breadcrumb, .updated-badge {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    @media (max-width: 1024px) {
+      .terms-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 3rem 0 4rem;
+      }
+      .terms-toc { position: static; display: none; } /* hide sidebar on tablet/mobile */
+      .terms-hero-orb-1 { width: 320px; height: 320px; top: -120px; right: -100px; }
+      .terms-hero-orb-2 { width: 240px; height: 240px; bottom: -80px; left: -80px; }
+    }
+
+    @media (max-width: 768px) {
+      .terms-hero {
+        padding: calc(var(--nav-h, 70px) + 2rem) 0 2.25rem;
+      }
+      .terms-hero h1 { font-size: clamp(1.6rem, 7vw, 2.2rem); line-height: 1.2; }
+      .terms-hero-desc { font-size: .92rem; padding: 0 .25rem; }
+      .terms-hero-orb { filter: blur(50px); opacity: .7; }
+      .terms-hero-orb-1 { width: 220px; height: 220px; top: -80px; right: -80px; }
+      .terms-hero-orb-2 { width: 180px; height: 180px; bottom: -60px; left: -60px; }
+
+      .tc-card { padding: 1.25rem 1rem; border-radius: 14px; }
+      .tc-intro-card { padding: 1.4rem 1.1rem; border-radius: 14px; }
+      .tc-card-header {
+        flex-direction: row; align-items: center;
+        gap: .7rem; padding-bottom: .9rem; margin-bottom: 1rem;
+      }
+      .tc-card-header-text h3 { font-size: 1rem; line-height: 1.3; }
+      .tc-card-header-text span { font-size: .68rem; }
+
+      .terms-layout { padding: 2rem 0 3rem; gap: 1rem; }
+      .terms-back-inner { flex-direction: column; text-align: center; }
+      .terms-back-strip { padding: 1.5rem 0; }
+
+      .tc-highlight, .tc-warning { padding: .8rem .9rem; font-size: .85rem; }
+      .breadcrumb { font-size: .72rem; padding: .4rem .85rem; flex-wrap: wrap; justify-content: center; }
+      .updated-badge { font-size: .7rem; }
+
+      /* Back-to-home buttons stack cleanly */
+      .terms-content > div[style*="text-align:center"] {
+        display: flex; flex-direction: column; gap: .6rem;
+        align-items: stretch; padding: 1rem .25rem;
+      }
+      .terms-content > div[style*="text-align:center"] > .btn {
+        margin: 0 !important; justify-content: center;
+      }
+
+      /* Footer: keep it from overflowing on phones */
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+      }
+      .footer-bottom .container {
+        flex-direction: column; gap: .75rem; text-align: center;
+      }
+      .footer-bottom-links { flex-wrap: wrap; justify-content: center; gap: .5rem 1rem; }
+
+      /* Floating buttons: avoid overlap with each other */
+      .wa-float { right: 16px; bottom: 16px; }
+      .scroll-top { right: 16px; bottom: 84px; }
+      .wa-popup { width: min(92vw, 320px); right: 0; }
+    }
+
+    @media (max-width: 480px) {
+      .terms-hero { padding: calc(var(--nav-h, 70px) + 1.5rem) 0 2rem; }
+      .terms-hero h1 { font-size: clamp(1.5rem, 8vw, 2rem); }
+      .terms-hero-desc { font-size: .88rem; margin-bottom: 1.1rem; }
+
+      .tc-card { padding: 1.1rem .9rem; }
+      .tc-intro-card { padding: 1.25rem 1rem; }
+      .tc-icon { width: 36px; height: 36px; font-size: .85rem; border-radius: 10px; }
+      .tc-card-header { gap: .6rem; }
+      .tc-card-header-text h3 { font-size: .95rem; }
+      .tc-body { font-size: .87rem; line-height: 1.7; }
+      .tc-body ul li { font-size: .85rem; }
+
+      .container { padding-left: 1rem; padding-right: 1rem; }
+
+      .breadcrumb a span:not(:first-child),
+      .breadcrumb > span { font-size: .7rem; }
+    }
+
+    /* Very narrow phones (e.g. 320px) */
+    @media (max-width: 360px) {
+      .terms-hero h1 { font-size: 1.4rem; }
+      .tc-card, .tc-intro-card { padding: 1rem .8rem; }
+      .tc-card-header-text h3 { font-size: .9rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================================================
+     NAVBAR (exact replica)
+=================================================== -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- Replace src with your actual logo path -->
+      <img src="images/luma.png" alt="LumaCare Dental Clinic" class="logo-img" />
+      <div class="logo-content">
+        <div class="logo-text">
+          <span class="logo-main">Luma</span><span class="logo-accent">Dental Care </span>
+        </div>
+        <span class="logo-tagline">Illuminate Your Smile</span>
+      </div>
+    </a>
+
+    <!-- Nav Links -->
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html#about" class="nav-link">About</a>
+      </li>
+      <li class="nav-item has-drop">
+        <a href="index.html#services" class="nav-link">
+          Services <i class="fa fa-chevron-down nav-arr"></i>
+        </a>
+        <div class="dropdown">
+          <a href="index.html#services" class="drop-item"><i class="fa fa-tooth"></i> General Dentistry</a>
+          <a href="index.html#services" class="drop-item"><i class="fa fa-star"></i> Cosmetic Dentistry</a>
+          <a href="index.html#services" class="drop-item"><i class="fa fa-shield-halved"></i> Orthodontics</a>
+          <a href="index.html#services" class="drop-item"><i class="fa fa-user-doctor"></i> Oral Surgery</a>
+          <a href="index.html#services" class="drop-item"><i class="fa fa-heart-pulse"></i> Periodontics</a>
+          <a href="index.html#services" class="drop-item"><i class="fa fa-child"></i> Paediatric Dentistry</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="index.html#doctors" class="nav-link">Doctors</a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html#appointment" class="btn btn-primary nav-cta">
+          <i class="fa fa-calendar-check"></i> Book Appointment
+        </a>
+      </li>
+    </ul>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+
+<!-- ===================================================
+     HERO / BANNER
+=================================================== -->
+<section class="terms-hero">
+  <div class="terms-hero-orb terms-hero-orb-1"></div>
+  <div class="terms-hero-orb terms-hero-orb-2"></div>
+  <div class="container terms-hero-inner">
+    <span class="eyebrow"><i class="fa fa-file-contract"></i> &nbsp; Legal</span>
+    <h1>Terms &amp; <em>Conditions</em></h1>
+    <p class="terms-hero-desc">
+      Please read these terms carefully before using our website or booking any services at LumaCare Dental Clinic, Chennai. Your use of our services constitutes acceptance of these terms.
+    </p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html"><i class="fa fa-house"></i> Home</a>
+      <i class="fa fa-chevron-right"></i>
+      <span>Terms &amp; Conditions</span>
+    </nav>
+    <div class="updated-badge">
+      <i class="fa fa-clock"></i> Last Updated: <span id="lastUpdated">June 2026</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================================================
+     TERMS LAYOUT (sidebar TOC + content)
+=================================================== -->
+<div class="container terms-layout">
+
+  <!-- ---- Sticky Table of Contents (desktop only) ---- -->
+  <aside class="terms-toc" aria-label="Table of Contents">
+    <h4><i class="fa fa-list-ul" style="margin-right:.4rem;color:var(--teal)"></i>Contents</h4>
+    <nav class="toc-list" id="tocList">
+      <a href="#sec-intro"       class="active"><i class="fa fa-info-circle"></i>Introduction</a>
+      <a href="#sec-acceptance">        <i class="fa fa-handshake"></i>Acceptance of Terms</a>
+      <a href="#sec-appointment">       <i class="fa fa-calendar-check"></i>Appointment Policy</a>
+      <a href="#sec-patient">           <i class="fa fa-user"></i>Patient Responsibilities</a>
+      <a href="#sec-consent">           <i class="fa fa-file-signature"></i>Treatment Consent</a>
+      <a href="#sec-disclaimer">        <i class="fa fa-stethoscope"></i>Medical Disclaimer</a>
+      <a href="#sec-fees">              <i class="fa fa-indian-rupee-sign"></i>Fees &amp; Payments</a>
+      <a href="#sec-cancellation">      <i class="fa fa-calendar-xmark"></i>Cancellation Policy</a>
+      <a href="#sec-emergency">         <i class="fa fa-truck-medical"></i>Emergency Care</a>
+      <a href="#sec-privacy">           <i class="fa fa-lock"></i>Privacy &amp; Confidentiality</a>
+      <a href="#sec-website">           <i class="fa fa-globe"></i>Website Usage</a>
+      <a href="#sec-ip">                <i class="fa fa-copyright"></i>Intellectual Property</a>
+      <a href="#sec-liability">         <i class="fa fa-shield-halved"></i>Limitation of Liability</a>
+      <a href="#sec-thirdparty">        <i class="fa fa-link"></i>Third-Party Links</a>
+      <a href="#sec-changes">           <i class="fa fa-rotate"></i>Changes to Terms</a>
+      <a href="#sec-contact">           <i class="fa fa-envelope"></i>Contact Us</a>
+    </nav>
+  </aside>
+
+  <!-- ---- Terms Content ---- -->
+  <main class="terms-content">
+
+    <!-- 1. Introduction -->
+    <div class="tc-intro-card reveal" id="sec-intro">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-tooth"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Introduction</h3>
+          <span>Section 01</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          Welcome to <strong>LumaDental Care </strong> ("LumaDentalCare", "we", "us", or "our"), a multi-specialty dental care facility located in Chennai, Tamil Nadu, India. These Terms &amp; Conditions ("Terms") govern your access to and use of our website at <strong>www.lumacare.in</strong>, our mobile application, and all dental services rendered at our clinic premises.
+        </p>
+        <p>
+          Luma Dental Care is registered under the applicable laws of India and is regulated by the <strong>Dental Council of India (DCI)</strong> and the <strong>Tamil Nadu Medical Council</strong>. All our dentists hold valid registration certificates and practise in full compliance with professional standards.
+        </p>
+        <div class="tc-highlight">
+          <i class="fa fa-circle-info"></i>
+          <strong>Jurisdiction:</strong> These Terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in Chennai, Tamil Nadu.
+        </div>
+        <p>
+          By accessing our website, booking an appointment, or receiving any treatment at LumaCare, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use our services.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. Acceptance of Terms -->
+    <div class="tc-card reveal" id="sec-acceptance">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-handshake"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Acceptance of Terms</h3>
+          <span>Section 02</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          By using this website or receiving dental services at LumaCare Dental Clinic, you acknowledge that you are at least 18 years of age or, if under 18, that you have obtained valid consent from a parent or legal guardian who agrees to these Terms on your behalf.
+        </p>
+        <p>Your acceptance of these Terms is indicated when you:</p>
+        <ul>
+          <li>Access or browse our website or digital platforms</li>
+          <li>Register or submit an online appointment request</li>
+          <li>Sign a physical consent or registration form at the clinic</li>
+          <li>Receive any consultation, examination, or dental treatment</li>
+          <li>Make a payment for any of our services</li>
+        </ul>
+        <div class="tc-highlight">
+          <i class="fa fa-circle-info"></i>
+          We reserve the right to modify these Terms at any time. Continued use of our services after such changes constitutes your acceptance of the revised Terms.
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Appointment Booking Policy -->
+    <div class="tc-card reveal" id="sec-appointment">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-calendar-check"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Appointment Booking Policy</h3>
+          <span>Section 03</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          All appointment requests made through our website, phone, or WhatsApp are subject to availability and confirmation by our front-desk team.
+           An appointment is confirmed only upon receiving a booking confirmation message or call from LumaCare.
+        </p>
+        <ul>
+          <li>Appointments are available Monday through Saturday, 10:00 AM – 4:00 PM IST, and Sundays 4:00 AM – 9:00 PM IST.</li>
+          <li>Patients are requested to arrive at least <strong>10 minutes</strong> prior to their scheduled appointment time.</li>
+          <li>Late arrivals of more than 15 minutes may result in rescheduling to the next available slot.</li>
+          <li>New patients must carry a valid government-issued photo ID (Aadhaar, PAN, Passport, or Voter ID).</li>
+          <li>Patients with prior dental records, X-rays, or treatment history from other clinics are requested to bring them along.</li>
+          <li>Emergency walk-in consultations are accepted subject to doctor availability.</li>
+        </ul>
+        <div class="tc-highlight">
+          <i class="fa fa-circle-info"></i>
+          LumaCare reserves the right to reschedule or cancel appointments in cases of unforeseen medical emergencies, public holidays, or force majeure events. Patients will be notified promptly in such circumstances.
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Patient Responsibilities -->
+    <div class="tc-card reveal" id="sec-patient">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-user-check"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Patient Responsibilities</h3>
+          <span>Section 04</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          To ensure safe, effective, and personalised dental care, patients are responsible for providing accurate and complete information to their treating dentist at all times.
+        </p>
+        <ul>
+          <li>Disclose all existing medical conditions, allergies, ongoing medications, and prior dental treatments before any procedure.</li>
+          <li>Inform our team immediately of any changes in your health condition or medication between appointments.</li>
+          <li>Follow all pre- and post-treatment instructions provided by the treating dentist.</li>
+          <li>Attend scheduled follow-up appointments to ensure proper healing and treatment success.</li>
+          <li>Maintain good oral hygiene practices as advised by your dentist.</li>
+          <li>Notify the clinic in advance if you are unable to keep your appointment (refer to Cancellation Policy).</li>
+          <li>Treat all clinic staff and fellow patients with respect and courtesy at all times.</li>
+        </ul>
+        <p>
+          Luma Dental Care accepts no liability for adverse treatment outcomes arising from incomplete, inaccurate, or withheld medical information provided by the patient.
+        </p>
+      </div>
+    </div>
+
+    <!-- 5. Treatment Consent -->
+    <div class="tc-card reveal" id="sec-consent">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-file-signature"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Treatment Consent</h3>
+          <span>Section 05</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          Luma Dental Care follows a strict <strong>informed consent</strong> protocol for all dental procedures. Before commencing any treatment, the treating dentist will explain the nature, purpose, potential risks, alternatives, and expected outcomes of the recommended procedure.
+        </p>
+        <ul>
+          <li>Patients must sign a written Informed Consent Form before undergoing any invasive or surgical dental procedure.</li>
+          <li>For minors (under 18 years), written consent must be obtained from a parent or legal guardian.</li>
+          <li>Patients have the right to ask questions and seek clarification before providing consent.</li>
+          <li>Consent may be withdrawn by the patient at any time before the commencement of the procedure.</li>
+          <li>In emergency situations where the patient is incapacitated and immediate treatment is essential to prevent serious harm, LumaCare may proceed with necessary care.</li>
+        </ul>
+        <div class="tc-highlight">
+          <i class="fa fa-circle-info"></i>
+          Photographic or radiographic records may be taken for clinical documentation and treatment planning purposes. These records are stored securely and will not be shared without explicit patient consent, except as required by law.
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Medical Disclaimer -->
+    <div class="tc-card reveal" id="sec-disclaimer">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-stethoscope"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Medical Disclaimer</h3>
+          <span>Section 06</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          The content published on this website — including articles, blogs, FAQs, service descriptions, and health tips — is intended solely for <strong>general informational and educational purposes</strong>. It does not constitute professional medical or dental advice.
+        </p>
+        <div class="tc-warning">
+          <i class="fa fa-triangle-exclamation"></i>
+          <strong>Important:</strong> Never disregard professional medical or dental advice, or delay seeking it, because of something you have read on this website. Always consult a qualified dentist for diagnosis and treatment.
+        </div>
+        <ul>
+          <li>Information on this website may not be applicable to your specific dental condition or medical history.</li>
+          <li>Treatment outcomes described on this website are illustrative; individual results may vary significantly.</li>
+          <li>LumaCare does not endorse any specific drug, product, or treatment mentioned on external websites linked from our pages.</li>
+          <li>Dental treatments carry inherent risks. All risks will be communicated to you during your consultation.</li>
+        </ul>
+        <p>
+          In the event of a dental emergency, please contact our clinic immediately at <strong>+91</strong> or visit the nearest hospital emergency department.
+        </p>
+      </div>
+    </div>
+
+    <!-- 7. Fees & Payments -->
+    <div class="tc-card reveal" id="sec-fees">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-indian-rupee-sign"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Fees &amp; Payments</h3>
+          <span>Section 07</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          All consultation and treatment fees at LumaCare Dental Clinic are denominated in <strong>Indian Rupees (INR)</strong> and are inclusive of applicable Goods &amp; Services Tax (GST) unless stated otherwise. A detailed treatment cost estimate will be provided before any procedure commences.
+        </p>
+        <ul>
+          <li>We accept payments via Cash, UPI (Google Pay, PhonePe, Paytm), Net Banking, Debit/Credit Cards, and EMI options for select treatments.</li>
+          <li>Full payment or a confirmed advance deposit is required before certain elective or multi-session procedures begin.</li>
+          <li>Luma Dental Care does not directly bill insurance companies; however, itemised receipts and treatment documentation will be provided to support your insurance claim.</li>
+          <li>Fee revisions may occur periodically. Patients will be informed of updated fees before commencing treatment.</li>
+          <li>Complimentary second opinions are available for complex or high-cost treatment plans.</li>
+        </ul>
+        <div class="tc-highlight">
+          <i class="fa fa-circle-info"></i>
+          <strong>GST Registration:</strong> LumaCare Dental Clinic is registered under GST. Your invoice will reflect the applicable GST rates as prescribed under the laws of India.
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Cancellation & Rescheduling -->
+    <div class="tc-card reveal" id="sec-cancellation">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-calendar-xmark"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Cancellation &amp; Rescheduling Policy</h3>
+          <span>Section 08</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          We value your time and our doctors' schedules equally. We kindly request that you inform us as early as possible if you need to cancel or reschedule your appointment.
+        </p>
+        <ul>
+          <li><strong>Cancellations made 24+ hours in advance:</strong> No charge; full refund of any advance payment.</li>
+          <li><strong>Cancellations within 12–24 hours:</strong> A nominal administrative fee of ₹200–₹500 may be applied depending on the procedure type.</li>
+          <li><strong>No-shows (without notice):</strong> The full consultation or advance booking fee may be forfeited.</li>
+          <li>To cancel or reschedule, please WhatsApp us at least 12 hours before your appointment.</li>
+          <li>Repeated no-shows (3 or more) may result in mandatory advance payment for future bookings.</li>
+        </ul>
+        <div class="tc-highlight">
+          <i class="fa fa-circle-info"></i>
+          Refunds, where applicable, will be processed within <strong>5–7 business days</strong> via the original payment method. UPI and card refunds may take up to 10 business days depending on your bank.
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Emergency Care Disclaimer -->
+    <div class="tc-card reveal" id="sec-emergency">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-truck-medical"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Emergency Care Disclaimer</h3>
+          <span>Section 09</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          Luma Dental Care Clinic provides dental emergency services during our operating hours. Our emergency dental care covers conditions such as severe toothache, dental trauma, lost fillings or crowns, dental abscesses, and post-surgical complications.
+        </p>
+        <div class="tc-warning">
+          <i class="fa fa-triangle-exclamation"></i>
+          <strong>Luma Dental Care is a dental clinic and is not equipped to handle life-threatening medical emergencies.</strong> In the event of a systemic medical emergency (cardiac arrest, anaphylaxis, severe allergic reaction, etc.), please call <strong>108 (Ambulance)</strong> or proceed to the nearest hospital emergency immediately.
+        </div>
+        <ul>
+          <li>Dental emergencies outside clinic hours may be directed to our emergency helpline, which is attended on a best-effort basis.</li>
+          <li>Emergency consultations carry a separate fee, which will be communicated before treatment.</li>
+          <li>Luma Dental Care is not liable for any adverse outcomes arising from delays in seeking emergency care at an appropriate medical facility.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 10. Privacy & Confidentiality -->
+    <div class="tc-card reveal" id="sec-privacy">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-lock"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Privacy &amp; Confidentiality</h3>
+          <span>Section 10</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          Luma Dental Care Clinic is fully committed to protecting the privacy of your personal and medical information. All patient data is handled in accordance with our <a href="privacy.html" style="color:var(--teal);font-weight:700;">Privacy Policy</a> and applicable Indian data protection laws, including the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023.
+        </p>
+        <ul>
+          <li>Patient medical records, treatment history, and personal details are maintained in strict confidence.</li>
+          <li>Information is shared with third parties only with your explicit consent or as required by law (e.g., court orders, regulatory compliance).</li>
+          <li>Referral letters to specialists will include relevant clinical information only.</li>
+          <li>Our website uses SSL encryption to protect data transmitted through online forms.</li>
+          <li>You have the right to access, rectify, or request deletion of your personal data held by LumaCare.</li>
+        </ul>
+        <div class="tc-highlight">
+          <i class="fa fa-circle-info"></i>
+          For a complete overview of how we collect, use, and store your data, please refer to our <a href="PrivacyPolicy.html" style="color:var(--teal);font-weight:700;">Privacy Policy</a>.
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Website Usage Policy -->
+    <div class="tc-card reveal" id="sec-website">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-globe"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Website Usage Policy</h3>
+          <span>Section 11</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          This website is intended for personal, non-commercial use only. You agree to use it in a lawful manner and in accordance with these Terms.
+        </p>
+        <ul>
+          <li>You must not use this website to transmit any harmful, defamatory, obscene, or unlawful content.</li>
+          <li>Automated scraping, crawling, or data extraction from this website is strictly prohibited without prior written consent.</li>
+          <li>You must not attempt to gain unauthorised access to any part of this website or its underlying systems.</li>
+          <li>LumaCare does not guarantee uninterrupted availability of the website and accepts no liability for downtime or technical errors.</li>
+          <li>We may use cookies to enhance your browsing experience. By continuing to use the site, you consent to our cookie policy.</li>
+        </ul>
+        <p>
+          LumaCare reserves the right to restrict or terminate access to any user who violates these Terms or engages in conduct that is harmful to the clinic, its staff, or its patients.
+        </p>
+      </div>
+    </div>
+
+    <!-- 12. Intellectual Property -->
+    <div class="tc-card reveal" id="sec-ip">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-copyright"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Intellectual Property Rights</h3>
+          <span>Section 12</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          All content on this website — including but not limited to text, graphics, logos, images, icons, audio/video clips, and software — is the exclusive intellectual property of <strong>LumaCare Dental Clinic</strong> or its licensed content providers and is protected under the Copyright Act, 1957 and other applicable intellectual property laws of India.
+        </p>
+        <ul>
+          <li>You may not reproduce, distribute, modify, or republish any content from this website without prior written permission from LumaCare.</li>
+          <li>The LumaCare name, logo, and tagline are registered trademarks of the clinic and may not be used without consent.</li>
+          <li>Sharing of our blog articles or educational content is permitted with proper attribution and a link back to the original source.</li>
+          <li>Patient reviews and testimonials submitted to LumaCare may be used for marketing purposes; patients consent to this use when submitting feedback.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 13. Limitation of Liability -->
+    <div class="tc-card reveal" id="sec-liability">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-shield-halved"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Limitation of Liability</h3>
+          <span>Section 13</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          To the maximum extent permitted under applicable Indian law, LumaCare Dental Clinic shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from:
+        </p>
+        <ul>
+          <li>Your use of or inability to use this website</li>
+          <li>Errors, omissions, or inaccuracies in website content</li>
+          <li>Complications arising from undisclosed medical conditions or patient non-compliance</li>
+          <li>Actions or omissions of any third-party service providers or labs</li>
+          <li>Events beyond our reasonable control, including natural disasters, pandemics, or government-mandated closures</li>
+        </ul>
+        <div class="tc-warning">
+          <i class="fa fa-triangle-exclamation"></i>
+          Nothing in these Terms limits our liability for death or personal injury caused by our proven negligence, or for fraud or fraudulent misrepresentation by our staff. Statutory rights under the Consumer Protection Act, 2019 are not affected.
+        </div>
+        <p>
+          Our total cumulative liability to you shall not exceed the fees paid by you for the specific treatment giving rise to the claim.
+        </p>
+      </div>
+    </div>
+
+    <!-- 14. Third-Party Links -->
+    <div class="tc-card reveal" id="sec-thirdparty">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-link"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Third-Party Links</h3>
+          <span>Section 14</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          Our website may contain links to external websites operated by third parties, including dental suppliers, health information portals, insurance providers, and payment gateways. These links are provided for your convenience only.
+        </p>
+        <ul>
+          <li>Luma Dental Care does not endorse, control, or take responsibility for the content, privacy practices, or availability of any third-party website.</li>
+          <li>Accessing third-party links is entirely at your own risk.</li>
+          <li>We recommend reviewing the Terms and Privacy Policy of any third-party website you visit.</li>
+          <li>Payment gateway services (Razorpay, Paytm, etc.) are governed by their own terms and security policies.</li>
+        </ul>
+        <p>
+          If you notice any broken links or links to inappropriate content on our website, please report them to us at <a href="mailto:info@lumacare.in" style="color:var(--teal);font-weight:700;">lumadentalcare@gmail.com</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- 15. Changes to Terms -->
+    <div class="tc-card reveal" id="sec-changes">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-rotate"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Changes to Terms &amp; Conditions</h3>
+          <span>Section 15</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          Luma Dental Car Clinic reserves the right to revise, update, or replace these Terms at any time without prior individual notification. The most current version of these Terms will always be available on this page with the updated "Last Updated" date.
+        </p>
+        <ul>
+          <li>Material changes to these Terms will be notified via a prominent notice on our website homepage for a minimum of 30 days.</li>
+          <li>Patients registered with us may also be notified via SMS or email for significant changes.</li>
+          <li>Your continued use of our services after any changes constitutes your acceptance of the revised Terms.</li>
+          <li>If you do not agree to the revised Terms, you may discontinue use of our services and request deletion of your records by contacting us.</li>
+        </ul>
+        <div class="tc-highlight">
+          <i class="fa fa-circle-info"></i>
+          We recommend bookmarking this page and reviewing these Terms periodically to stay informed of any updates.
+        </div>
+      </div>
+    </div>
+
+    <!-- 16. Contact Information -->
+    <div class="tc-card reveal" id="sec-contact">
+      <div class="tc-card-header">
+        <div class="tc-icon"><i class="fa fa-envelope"></i></div>
+        <div class="tc-card-header-text">
+          <h3>Contact Information</h3>
+          <span>Section 16</span>
+        </div>
+      </div>
+      <div class="tc-body">
+        <p>
+          If you have any questions, concerns, or grievances regarding these Terms &amp; Conditions or your experience at LumaCare Dental Clinic, please reach out to us through any of the following channels:
+        </p>
+        <ul>
+          <li><strong>Clinic Name:</strong> LumaDental Care</li>
+          <li><strong>Address:</strong> Mogappair East, Chennai - 600037 Tamil Nadu, India</li>
+          <li><strong>Phone:</strong> +91 88074 15161 (Mon–Sat, 9:00 AM – 8:00 PM IST)</li>
+          <li><strong>WhatsApp:</strong> +91 88074 15161</li>
+          <li><strong>Email:</strong> lumadentalcare@gmail.com</li>
+          <!-- <li><strong>Grievance Officer:</strong> Dr.Brighton Mani Selvam<a href="mailto:grievance@lumacare.in" style="color:var(--teal);font-weight:700;">grievance@lumacare.in</a></li> -->
+        </ul>
+        <p>
+          We aim to respond to all enquiries within <strong>2 business days</strong>. Formal grievances will receive a written response within <strong>7 business days</strong> as required under the Consumer Protection Act, 2019.
+        </p>
+        <div class="tc-highlight">
+          <i class="fa fa-circle-info"></i>
+          These Terms were last reviewed and approved by the LumaCare Legal &amp; Compliance Team in June 2025 and are in compliance with Indian healthcare regulations and digital laws in force as of the stated date.
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Home -->
+    <div style="text-align:center;padding:1rem 0 .5rem;">
+      <a href="index.html" class="btn btn-primary" style="gap:.55rem;">
+        <i class="fa fa-arrow-left"></i> Back to Home
+      </a>
+      <a href="index.html#appointment" class="btn btn-outline" style="margin-left:.75rem;gap:.55rem;">
+        <i class="fa fa-calendar-check"></i> Book Appointment
+      </a>
+    </div>
+
+  </main>
+</div><!-- /terms-layout -->
+
+
+<!-- ===================================================
+     FOOTER (exact replica)
+=================================================== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <!-- <img src="logo-white.png" alt="LumaCare Dental Clinic" class="footer-logo" /> -->
+          <p>Delivering world-class dental care with compassion, precision, and advanced technology. Your smile is our greatest reward.</p>
+          <div class="footer-rating">
+            <span class="fr-stars">★★★★★</span>
+            <span>5.0</span>
+          </div>
+          <div class="footer-socials">
+            <a href="f#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="https://wa.me/9188074 15161" class="footer-wa" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#services">Our Services</a></li>
+            <li><a href="index.html#doctors">Our Doctors</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+            <li><a href="index.html#appointment">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="index.html#services">General Dentistry</a></li>
+            <li><a href="index.html#services">Cosmetic Dentistry</a></li>
+            <li><a href="index.html#services">Orthodontics &amp; Braces</a></li>
+            <li><a href="index.html#services">Dental Implants</a></li>
+            <li><a href="index.html#services">Oral Surgery</a></li>
+            <li><a href="index.html#services">Paediatric Dentistry</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa fa-location-dot"></i>
+              <span>Mogappair East, Chennai - 600037</span>
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel:+9188074 15161 "> <span>+91 88074 15161</span> </a>
+            </li>
+            <li>
+              <i class="fab fa-whatsapp"></i>
+              <a href="https://wa.me/91 88074 15161">+91 88074 15161</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <a href="mailto:info@lumacare.in">lumadentalcare@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa fa-clock"></i>
+              <span>Mon–Sat: 9 AM – 8 PM<br>Sun: 10 AM – 4 PM(Based On Time)</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; <span id="footerYear"></span> Luma Dental Care All rights reserved.</p>
+      <nav class="footer-bottom-links">
+        <a href="PrivacyPolicy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <!-- <a href="sitemap.html">Sitemap</a> -->
+      </nav>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ===================================================
+     WHATSAPP FLOAT
+=================================================== -->
+<div class="wa-float">
+  <div class="wa-popup" id="waPopup">
+    <div class="wa-popup-header">
+      <div class="wa-popup-av"><i class="fab fa-whatsapp"></i></div>
+      <div>
+        <div class="wa-popup-name">LumaDental Care Clinic</div>
+        <div class="wa-popup-status"><span class="wa-dot"></span>Typically replies instantly</div>
+      </div>
+      <button class="wa-close" id="waClose" aria-label="Close WhatsApp popup"><i class="fa fa-xmark"></i></button>
+    </div>
+    <div class="wa-bubble">Hello! 👋 Welcome to LumaCare. How can we assist you today? Book an appointment or ask us anything!</div>
+    <a href="https://wa.me/919876543210?text=Hi%20LumaCare%2C%20I'd%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" class="wa-popup-cta">
+      <i class="fab fa-whatsapp"></i> Start Chat
+    </a>
+  </div>
+  <button class="wa-btn" id="waBtn" aria-label="Open WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </button>
+</div>
+
+
+<!-- ===================================================
+     SCROLL TO TOP
+=================================================== -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <i class="fa fa-arrow-up"></i>
+</button>
+
+
+<!-- ===================================================
+     JAVASCRIPT
+=================================================== -->
+<script>
+(function () {
+  'use strict';
+
+  // ---- Dynamic Year ----
+  const yr = new Date().getFullYear();
+  const footerYear = document.getElementById('footerYear');
+  if (footerYear) footerYear.textContent = yr;
+
+  // ---- Navbar scroll class ----
+  const navbar = document.getElementById('navbar');
+  function onScroll () {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+    scrollTopBtn.classList.toggle('show', window.scrollY > 400);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ---- Hamburger / mobile nav ----
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  hamburger.addEventListener('click', function () {
+    this.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+
+  // Close mobile nav on outside click
+  document.addEventListener('click', function (e) {
+    if (!navbar.contains(e.target)) {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    }
+  });
+
+  // Mobile dropdown toggle
+  document.querySelectorAll('.nav-item.has-drop').forEach(function (item) {
+    item.querySelector('.nav-link').addEventListener('click', function (e) {
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        item.classList.toggle('active');
+      }
+    });
+  });
+
+  // ---- Scroll to top ----
+  const scrollTopBtn = document.getElementById('scrollTop');
+  scrollTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ---- WhatsApp popup ----
+  const waBtn   = document.getElementById('waBtn');
+  const waPopup = document.getElementById('waPopup');
+  const waClose = document.getElementById('waClose');
+  waBtn.addEventListener('click', function () {
+    waPopup.classList.toggle('open');
+  });
+  waClose.addEventListener('click', function (e) {
+    e.stopPropagation();
+    waPopup.classList.remove('open');
+  });
+
+  // ---- Reveal on scroll ----
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(function (el) { revealObs.observe(el); });
+
+  // ---- TOC active highlight on scroll ----
+  const tocLinks   = document.querySelectorAll('.toc-list a');
+  const sections   = document.querySelectorAll('.tc-card[id], .tc-intro-card[id]');
+  if (tocLinks.length && sections.length) {
+    const tocObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(function (a) { a.classList.remove('active'); });
+          const active = document.querySelector('.toc-list a[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    sections.forEach(function (s) { tocObs.observe(s); });
+  }
+})();
+</script>
+
+</body>
+</html>
